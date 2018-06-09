@@ -1,0 +1,29 @@
+{
+    "_comment": "See https://go.microsoft.com/fwlink/?LinkId=733558",
+    //"_comment": "for the documentation about the tasks.json format",
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "sync",
+            "type": "shell",
+            "command": "git add -A;if ($?){git commit -m 'change text'};$commitFlag=$?;git pull --no-edit ;if ($? -and $commitFlag) {git push}",
+            "presentation":{
+                "echo": true,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "synclinux",
+            "type": "shell",
+            "command": "git add -A && git commit -m 'change text' ; commitFlag=$? ; git pull --no-edit && if [ $commitFlag -eq 0 ]; then git push; fi ",
+            "presentation":{
+                "echo": true,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared"
+            }
+        }
+    ]
+}
