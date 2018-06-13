@@ -7,12 +7,16 @@ class npLoader():
         self.trainNum = 60000
         self.testNum = 10000
         self.fw = 45 #figure width
-    def loadData(self, dataPath, train = True):
+    def loadData(self, dataPath, train = True, transform = True):
         data = np.fromfile(dataPath, dtype = np.uint8)
+        
         if train:
             data_num = self.trainNum
         else:
             data_num = self.testNum
+        if not transform:
+            return data.reshape(data_num, self.fw*self.fw)
+        
         data = data.reshape(data_num, self.fw, self.fw)
         return data
     
