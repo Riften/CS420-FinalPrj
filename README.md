@@ -1,5 +1,5 @@
 # 2018 CS420 Final Prj
-test
+The rest of codes will be uploaded soon.
 
 ## pylib
 Folder pylib contains all the functions we write. We can use any function in any file by "from pylib.file import function"
