@@ -11,6 +11,8 @@ Folder pylib contains all the functions we write. We can use any function in any
 
 ### dataLoader.py
 Several classes used to load data and label.
+#### class npLoader
+Class used to load data for traditional classification models.
 
 How to use:
 ```Python
@@ -19,8 +21,6 @@ loader = npLoader()
 data = loader.loadData('mnist/mnist_test/mnist_test_data', train = False)
 label = loader.loadLabel('mnist/mnist_test/mnist_test_label', train = False)
 ```
-#### class npLoader
-Class used to load data for traditional classification models.
 #### class My_MNIST
 A class inherited from <code>torch.utils.data.Dataset</code>. Used to load data used for deep learning models based on pytorch.
 
