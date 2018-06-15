@@ -11,6 +11,9 @@ Folder pylib contains all the functions we write. We can use any function in any
 
 ### dataLoader.py
 Several classes used to load data and label.
+#### npLoader()
+Function used to load data for traditional classification models.
+#### 
 How to use:
 
 ```Python
@@ -20,3 +23,4 @@ data = loader.loadData('mnist/mnist_test/mnist_test_data', train = False)
 label = loader.loadLabel('mnist/mnist_test/mnist_test_label', train = False)
 ```
 ### visual.py
+Visualization Tools.

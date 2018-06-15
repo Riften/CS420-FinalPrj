@@ -1,6 +1,6 @@
 import numpy as np
-#import torch.utils.data as Data
-#import torch
+import torch.utils.data as Data
+import torch
 
 class npLoader():
     def __init__(self):
@@ -23,11 +23,9 @@ class npLoader():
     def loadLabel(self, labelPath, train = True):
         label = np.fromfile(labelPath, dtype = np.uint8)
         return label
-'''
+    
 class My_MNIST(Data.Dataset):
-    def __init__(self, data_path, label_path, train=True, transform=None, target_transform=None, download=False):
-        self.transform = transform
-        self.target_transform = target_transform
+    def __init__(self, data_path, label_path, train=True):
         self.train = train  # training set or test set
         self.test_num = 10000
         self.train_num = 60000
@@ -46,4 +44,3 @@ class My_MNIST(Data.Dataset):
             return 60000
         else:
             return 10000
-'''
