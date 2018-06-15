@@ -11,6 +11,7 @@ Folder pylib contains all the functions we write. We can use any function in any
 
 ### dataLoader.py
 Several classes used to load data and label.
+How to use:
 
 ```Python
 from pylib.dataLoader import npLoader
