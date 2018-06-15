@@ -11,7 +11,7 @@ Folder pylib contains all the functions we write. We can use any function in any
 
 ### dataLoader.py
 Several classes used to load data and label.
-#### npLoader()
+#### class npLoader
 Function used to load data for traditional classification models.
 #### 
 How to use:
