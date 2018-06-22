@@ -32,6 +32,9 @@ train_loader = Data.DataLoader(dataset=train_set, batch_size=BATCH_SIZE, shuffle
 test_loader = Data.DataLoader(dataset=test_set, batch_size=BATCH_SIZE, shuffle=True)
 ```
 
+### CNN.py
+
+
 
 ### visual.py
 Visualization Tools.
