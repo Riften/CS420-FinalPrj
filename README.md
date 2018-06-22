@@ -36,5 +36,6 @@ test_loader = Data.DataLoader(dataset=test_set, batch_size=BATCH_SIZE, shuffle=T
 
 
 
+
 ### visual.py
 Visualization Tools.
