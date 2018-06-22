@@ -2,6 +2,7 @@ import numpy as np
 import threading
 import pickle
 from sklearn.neighbors import KNeighborsClassifier
+from pylib.traditional import traditioanl_classifier
 import os
 
 #KNN on Different PCA Dimension
