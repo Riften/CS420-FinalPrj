@@ -27,7 +27,6 @@ criterion = nn.CrossEntropyLoss()
 lr = 0.001
 optimizer = torch.optim.Adam(resnet.parameters(), lr=lr)
 EPOCH = 50
-
 # Training
 #train(epoch, model, train_loader, loss_f, optimizer)
 for epoch in range(EPOCH):
