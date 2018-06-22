@@ -48,18 +48,23 @@ Input:
 '''
 def train(epoch, model, train_loader, loss_f, optimizer):
     for batch_idx, (data, target) in enumerate(train_loader):  
-        data, target = data.cuda(), target.cuda()  
+        data, target = data.cuda(), target.cuda()  #Load data in GPU device.
         data, target = Variable(data), Variable(target)
-        optimizer.zero_grad()
+        optimizer.zero_grad()   #Reset the gradient of optimizer
         output = model(data)  
 
         loss = loss_f(output, target)  
         loss.backward()  
         optimizer.step()  
-        if batch_idx % 200== 0:  
+        if batch_idx % 200== 0:  #Print the training result every 200 batches
             print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(  
                 epoch, batch_idx * len(data), len(train_loader.dataset),  
-                100. * batch_idx / len(train_loader), loss.data[0]))  
+                100. * batch_idx / len(train_loader), loss.data[0])) 
+
+'''
+Function test
+Test CNN model.
+'''
 def test(epoch, model, test_loader, loss_f):
     test_loss = 0  
     correct = 0  
@@ -74,6 +79,11 @@ def test(epoch, model, test_loader, loss_f):
     print('\nTest set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)\n'.format(  
         test_loss, correct, len(test_loader.dataset),  
         100. * correct / len(test_loader.dataset))) 
+
+'''
+Function used to reduce the learning rate.
+It will change the 'lr' parameter of optimizer instance.
+'''
 def adjust_learning_rate(optimizer, decay_rate=.9):
     for param_group in optimizer.param_groups:
         param_group['lr'] = param_group['lr'] * decay_rate
