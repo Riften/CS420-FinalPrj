@@ -29,5 +29,8 @@ Definition of CNN model and ResNet model.
 
 It also contains the train and test function for CNN and ResNet model.
 
+## traditional.py
+Functions used to do PCA and fit traditional classifiers using sklearn package.
+
 ## visual.py
 Visualization Tools.
