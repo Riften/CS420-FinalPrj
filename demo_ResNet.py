@@ -14,7 +14,7 @@ test_data_path = "mnist/mnist_test/mnist_test_data"
 test_label_path = "mnist/mnist_test/mnist_test_label"
 train_data_path = "mnist/mnist_train/mnist_train_data"
 train_label_path = "mnist/mnist_train/mnist_train_label"
-cnn = CNN().cuda()
+BATCH_SIZE = 50
 test_set = My_MNIST(test_data_path, test_label_path, train=False)
 train_set = My_MNIST(train_data_path, train_label_path, train = True)
 train_loader = Data.DataLoader(dataset=train_set, batch_size=BATCH_SIZE, shuffle=True)
