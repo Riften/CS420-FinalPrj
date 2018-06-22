@@ -42,7 +42,9 @@ Train CNN model useing data loaded by data loader.
 Input:
     epoch: The corrent epoch
     model: Instance of CNN model.
-    train_loader: 
+    train_loader: Instance of torch.utils.data.DataLoader class.
+    loss_f: loss function
+    optimizer: The optimizer from torch.optim package.
 '''
 def train(epoch, model, train_loader, loss_f, optimizer):
     for batch_idx, (data, target) in enumerate(train_loader):  
