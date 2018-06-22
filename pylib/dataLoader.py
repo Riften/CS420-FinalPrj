@@ -23,7 +23,16 @@ class npLoader():
     def loadLabel(self, labelPath, train = True):
         label = np.fromfile(labelPath, dtype = np.uint8)
         return label
-    
+
+'''
+Class: My_MNIST
+A dataset class inherited from torch.utils.data.Dataset.
+It can be used as the dataset parameter for torch.utils.data.DataLoader instance.
+Initialize Input:
+    data_path: The path of data file.
+    label_path: The path of label file.
+    train: Whether the dataset is a training set.
+'''
 class My_MNIST(Data.Dataset):
     def __init__(self, data_path, label_path, train=True):
         self.train = train  # training set or test set
