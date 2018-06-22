@@ -8,3 +8,5 @@ The rest of codes will be uploaded soon.
 
 ## pylib
 Functions and classes writen by ourselves.
+
+See more details from readme file in pylib folder.
